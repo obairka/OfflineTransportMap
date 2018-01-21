@@ -1,9 +1,9 @@
 package ru.monopolio.core.pathfinder
 
 
-class DejkstraPathFinder : IStationFinder {
+class DejkstraPathFinder : IPathFinder {
 
-    override fun path(start: INode, end: INode, graph: IGraph): List<INode> {
+    override fun path(start: INode, end: INode, graph: IGraph): NodePath {
         val visitedNodes = HashSet<INode>()
         val distances = HashMap<INode, Double>()
         val pathes = HashMap<INode, ArrayList<INode>>()
@@ -44,7 +44,7 @@ class DejkstraPathFinder : IStationFinder {
             }
         }
 
-        return pathes[end]!!.toList()
+        return NodePath(pathes[end]!!.toList(), distances[end]!!)
     }
 
 }

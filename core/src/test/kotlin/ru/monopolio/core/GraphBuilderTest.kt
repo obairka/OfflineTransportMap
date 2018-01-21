@@ -52,8 +52,10 @@ class GraphBuilderTest {
         val node1 = Node(route, station1)
         val node2 = Node(route, station2)
 
-        assertEquals(arrayListOf(node1, node2), graph.getNodes())
+        assert(graph.graph.getNodes().contains(node1))
+        assert(graph.graph.getNodes().contains(node2))
+
         assertEquals(arrayListOf(Edge(node1, node2, 1.0)),
-                graph.getNeighbours(node1).filter { it.from == node1 && it.to == node2 })
+                graph.graph.getNeighbours(node1).filter { it.from == node1 && it.to == node2 })
     }
 }

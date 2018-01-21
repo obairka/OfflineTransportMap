@@ -6,5 +6,4 @@ import ru.monopolio.core.model.Station
 
 data class SubRoute(
         val route: Route,
-        val start: Station,
-        val end: Station)
+        val path: List<Station>)

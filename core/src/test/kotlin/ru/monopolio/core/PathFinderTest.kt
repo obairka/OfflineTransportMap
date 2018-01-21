@@ -21,7 +21,7 @@ class PathFinderTest {
 
         val pathFinder = DejkstraPathFinder()
 
-        val path = pathFinder.path(first, second, graph)
+        val path = pathFinder.path(first, second, graph).path
 
         assertEquals(arrayListOf(first, second), path)
 
@@ -42,7 +42,7 @@ class PathFinderTest {
 
         val pathFinder = DejkstraPathFinder()
 
-        val path = pathFinder.path(first, third, graph)
+        val path = pathFinder.path(first, third, graph).path
 
         assertEquals(arrayListOf(first, third), path)
 
@@ -65,7 +65,7 @@ class PathFinderTest {
 
         val pathFinder = DejkstraPathFinder()
 
-        val path = pathFinder.path(first, fourth, graph)
+        val path = pathFinder.path(first, fourth, graph).path
 
         assertEquals(arrayListOf(first, second, third, fourth), path)
 
@@ -88,7 +88,7 @@ class PathFinderTest {
 
         val pathFinder = DejkstraPathFinder()
 
-        val path = pathFinder.path(first, fourth, graph)
+        val path = pathFinder.path(first, fourth, graph).path
 
         assertEquals(arrayListOf(first, third, fourth), path)
 
@@ -111,7 +111,7 @@ class PathFinderTest {
 
         val pathFinder = DejkstraPathFinder()
 
-        val path = pathFinder.path(first, fourth, graph)
+        val path = pathFinder.path(first, fourth, graph).path
 
         assertEquals(arrayListOf(first, second, third, fourth), path)
 

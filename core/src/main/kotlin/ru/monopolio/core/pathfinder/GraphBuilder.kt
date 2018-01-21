@@ -36,7 +36,7 @@ class GraphBuilder(private val distanceCalculator: IDistanceCalculator) {
         }
     }
 
-    fun build(): Graph = graph
+    fun build(): GraphInfo = GraphInfo(graph, nodes)
 
     private fun addNode(node: Node) {
         if (!nodes.containsKey(node.station.name)) {
@@ -45,4 +45,5 @@ class GraphBuilder(private val distanceCalculator: IDistanceCalculator) {
 
         nodes[node.station.name]!!.add(node)
     }
+
 }
